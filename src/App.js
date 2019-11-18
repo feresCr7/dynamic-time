@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react' ;
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+let ess= 5098500
+const App=()=>{
+    const hours = Math.floor((ess / 3600000) % 24);
+    const minutes = Math.floor((ess / 60000) % 60);
+    const seconds = Math.floor((ess / 1000) % 60);
+    return(
+        <h1 className='TimeFormat'>
+    {String(hours).padStart(2, "0")} : {String(minutes).padStart(2, "0")}{" "}
+    : {String(seconds).padStart(2, "0")}
+  </h1>
+  
+    )
+    
 }
-
-export default App;
+export default App ;
